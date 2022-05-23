@@ -1,0 +1,20 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	pgv.net. root.pgv.net. (
+			      4		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	pgv.net.
+@	IN	A	192.168.1.8
+@	IN	AAAA	::1
+
+; Registros A
+router	IN	A	192.168.1.1
+router2	IN	A	192.168.1.2
+dns	IN	A	192.168.1.8
+esclavo	IN	A	192.168.1.9
